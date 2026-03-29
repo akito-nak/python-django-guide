@@ -1,0 +1,30 @@
+# requirements/development.txt
+-r base.txt
+
+# ── Debug ──────────────────────────────────────────────────────
+django-debug-toolbar==4.3.0
+django-extensions==3.2.3      # shell_plus, show_urls, etc.
+
+# ── Testing ───────────────────────────────────────────────────
+pytest==8.2.0
+pytest-django==4.8.0
+pytest-cov==5.0.0
+pytest-xdist==3.5.0           # parallel test execution
+factory-boy==3.3.0
+Faker==25.2.0
+
+# ── Code Quality ──────────────────────────────────────────────
+black==24.4.2                  # formatter
+isort==5.13.2                  # import sorting
+flake8==7.0.0                  # linter
+mypy==1.10.0                   # type checking
+django-stubs==5.0.0            # mypy stubs for Django
+djangorestframework-stubs==3.15.0
+pre-commit==3.7.1              # run checks before every commit
+
+
+# requirements/production.txt
+-r base.txt
+
+gunicorn==22.0.0               # WSGI server
+uvicorn[standard]==0.29.0      # ASGI server (for async views)

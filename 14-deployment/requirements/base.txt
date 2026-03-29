@@ -1,0 +1,53 @@
+# ============================================================
+# requirements/base.txt — dependencies for ALL environments
+# ============================================================
+
+# ── Django Core ───────────────────────────────────────────────
+Django==5.0.6
+djangorestframework==3.15.1
+djangorestframework-simplejwt==5.3.1
+django-cors-headers==4.3.1
+django-filter==24.2
+drf-spectacular==0.27.2        # OpenAPI/Swagger docs
+
+# ── Database ──────────────────────────────────────────────────
+psycopg2-binary==2.9.9         # PostgreSQL driver
+dj-database-url==2.1.0         # parse DATABASE_URL env var
+pgvector==0.2.5                # vector similarity search (for AI/embeddings)
+
+# ── Configuration ─────────────────────────────────────────────
+python-decouple==3.8           # read config from .env files
+
+# ── Caching ───────────────────────────────────────────────────
+django-redis==5.4.0
+redis==5.0.4
+
+# ── Static Files ──────────────────────────────────────────────
+whitenoise==6.7.0              # serve static files from Django
+
+# ── Authentication ────────────────────────────────────────────
+PyJWT==2.8.0
+
+# ── Task Queue (Celery) ───────────────────────────────────────
+celery==5.4.0
+django-celery-beat==2.6.0      # periodic tasks stored in DB
+django-celery-results==2.5.1   # store task results in DB
+
+# ── Image Processing ──────────────────────────────────────────
+Pillow==10.3.0                 # required for ImageField
+
+# ── Storage (AWS S3) ──────────────────────────────────────────
+django-storages==1.14.3
+boto3==1.34.101
+
+# ── Monitoring ────────────────────────────────────────────────
+sentry-sdk==2.2.0              # error tracking
+
+# ── Logging ───────────────────────────────────────────────────
+python-json-logger==2.0.7
+
+# ── Utilities ─────────────────────────────────────────────────
+requests==2.31.0
+httpx==0.27.0                  # async HTTP client
+python-slugify==8.0.4
+Pillow==10.3.0

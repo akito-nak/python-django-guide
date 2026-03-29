@@ -1,0 +1,44 @@
+# requirements/ai.txt — AI/ML dependencies
+# Install with: pip install -r requirements/ai.txt
+
+-r base.txt
+
+# ── OpenAI ────────────────────────────────────────────────────
+openai==1.30.1
+
+# ── LangChain ecosystem ────────────────────────────────────────
+langchain==0.2.3
+langchain-openai==0.1.8
+langchain-community==0.2.4
+langchain-core==0.2.5
+
+# ── Vector stores ─────────────────────────────────────────────
+chromadb==0.5.0                # local vector DB
+# pinecone-client==3.2.2       # cloud vector DB (uncomment if needed)
+
+# ── Embeddings & Transformers ─────────────────────────────────
+sentence-transformers==3.0.0   # local embeddings (all-MiniLM-L6-v2 etc.)
+transformers==4.41.1           # HuggingFace transformers
+# torch==2.3.0                 # PyTorch (uncomment for local models)
+# tensorflow==2.16.1           # TensorFlow alternative
+
+# ── Data Science ──────────────────────────────────────────────
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+scipy==1.13.0
+joblib==1.4.2                  # model serialization
+
+# ── NLP ───────────────────────────────────────────────────────
+nltk==3.8.1
+spacy==3.7.4                   # advanced NLP
+# python -m spacy download en_core_web_sm
+
+# ── Visualization (optional) ──────────────────────────────────
+matplotlib==3.8.4
+seaborn==0.13.2
+plotly==5.22.0                 # interactive charts
+
+# ── Jupyter (for exploration) ─────────────────────────────────
+jupyterlab==4.2.1
+ipywidgets==8.1.3
